@@ -1,10 +1,10 @@
 <template>
   <div>
     <myHeader></myHeader>
-    <!--<h2 v-text="dat.title"></h2>
-    <p v-text="dat.date"></p>
+    <h2 v-text="article.title"></h2>
+    <p v-text="article.date"></p>
     <hr>
-    <article v-html="dat.content"></article>-->
+    <article v-html="article.content"></article>
     <myFooter></myFooter>
   </div>
 </template>
@@ -16,7 +16,7 @@
     data () {
       return {
         id: this.$route.params.id,
-        dat: {}
+        article: {}
       }
     },
     created () {
@@ -25,8 +25,7 @@
     methods: {
       getData () {
         this.$api.get('article/content/' + this.id, null, r => {
-          this.dat = r
-          console.log(dat)
+          this.article = r.resData
         })
       }
     }

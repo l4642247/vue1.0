@@ -47,13 +47,13 @@ function apiAxios (method, url, params, success, failure) {
     .then(function (res) {
       if (res.data.resCode === '0') {
         if (success) {
-          success(res.data.resData)
+          success(res.data)
         }
       } else {
         if (failure) {
-          failure(res.data.resData)
+          failure(res.data)
         } else {
-          window.alert('error: ' + JSON.stringify(res.data.resData))
+          window.alert('error: ' + JSON.stringify(res.data))
         }
       }
     })
