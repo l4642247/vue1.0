@@ -32,7 +32,7 @@
     components: { Header, Footer, MoPaging },
     data () {
       return {
-        pageSize : 2 , //每页显示20条数据
+        pageSize : 10 , //每页显示20条数据
         currentPage : 1, //当前页码
         count : 0, //总记录数
         list: []

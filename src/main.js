@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import './style/base/base.css' /*引入公共样式*/
+import './style/base/m.css'
+
 // 引用API文件
 import api from './api/index.js'
 // 将API方法绑定到全局
